@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-    Box, Heading, Flex,
-} from "@chakra-ui/react";
+import { Box, Heading, Flex } from "@chakra-ui/react";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Modals from "../../components/Modal";
@@ -47,11 +45,11 @@ const Home = () => {
                 infiniteLoop={false}
                 autoPlay={false}
                 stopOnHover={false}
-
             >
                 {img.map((item, idx) => (
                     <Box
                         key={idx}
+                        height="calc(var(--vh, 1vh) * 100)"  // Use the CSS variable for height
                         backgroundImage={`url('${item}')`}
                         backgroundSize="cover"
                         backgroundPosition="center"

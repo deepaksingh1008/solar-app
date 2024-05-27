@@ -1,3 +1,5 @@
+
+
 import { Box, Flex, Text, Link, VStack, IconButton } from "@chakra-ui/react";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
@@ -7,7 +9,7 @@ const Footer = () => {
             as="footer"
             py={10}
             px={6}
-            bg="linear-gradient(to right, #3f3f3f, #1a1a1a)" // Brown and black combination
+            bg="#383630" // Flipkart-like blue color
             color="white"
         >
             <Flex justifyContent="space-between" flexDirection={['column', 'column', 'row']} alignItems="center">
