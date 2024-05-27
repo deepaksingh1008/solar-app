@@ -45,6 +45,8 @@ const Home = () => {
                 infiniteLoop={false}
                 autoPlay={false}
                 stopOnHover={false}
+                swipeable
+                emulateTouch
             >
                 {img.map((item, idx) => (
                     <Box
@@ -54,6 +56,7 @@ const Home = () => {
                         backgroundSize="cover"
                         backgroundPosition="center"
                         color="white"
+                        style={{ touchAction: 'pan-y' }} // Allow vertical scroll
                     >
                         <Flex direction="column" align="center" justify="center" h="100%" w="100%">
                             <Heading as="h1" size="4xl" mb={4} textAlign="center" color='#C53030'>
