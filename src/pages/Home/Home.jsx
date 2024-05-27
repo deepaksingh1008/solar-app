@@ -55,7 +55,7 @@ const Home = () => {
                 {img.map((item, idx) => (
                     <Box
                         key={idx}
-                        h="100vh"
+                        h="80vh"
                         backgroundImage={`url('${item}')`}
                         backgroundSize="cover"
                         backgroundPosition="center"
