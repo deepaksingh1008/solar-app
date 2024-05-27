@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import {
     Box, Heading, Flex,
-
 } from "@chakra-ui/react";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Modals from "../../components/Modal";
-const Home = () => {
 
+const Home = () => {
     const [img, setImg] = useState([
         'https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg',
         'https://images.unsplash.com/photo-1558449028-b53a39d100fc?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29sYXJ8ZW58MHx8MHx8fDA%3D',
@@ -24,9 +23,6 @@ const Home = () => {
             setDirection('forward');
         }
     };
-
-
-
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -75,8 +71,6 @@ const Home = () => {
                     </Box>
                 ))}
             </Carousel>
-
-
         </Box>
     );
 };
