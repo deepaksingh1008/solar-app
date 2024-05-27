@@ -34,7 +34,7 @@ const Modals = () => {
         //console.log('->', formData)
         try {
             const response = await axios.post('https://api.web3forms.com/submit', {
-                access_key: 'a00a7efc-b31d-487c-b6f2-1e1a68edd962', // Replace with your actual Web3Forms access key
+                access_key: process.env.REACT_APP_API_KEY, // Replace with your actual Web3Forms access key
                 ...formData
             });
 
