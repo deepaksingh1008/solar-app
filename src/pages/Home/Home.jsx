@@ -47,11 +47,11 @@ const Home = () => {
                 infiniteLoop={false}
                 autoPlay={false}
                 stopOnHover={false}
+
             >
                 {img.map((item, idx) => (
                     <Box
                         key={idx}
-                        h="85vh"
                         backgroundImage={`url('${item}')`}
                         backgroundSize="cover"
                         backgroundPosition="center"
