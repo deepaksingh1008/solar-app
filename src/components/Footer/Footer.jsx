@@ -1,5 +1,3 @@
-
-
 import { Box, Flex, Text, Link, VStack, IconButton } from "@chakra-ui/react";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
@@ -11,6 +9,7 @@ const Footer = () => {
             px={6}
             bg="#383630" // Flipkart-like blue color
             color="white"
+            width="100%"
         >
             <Flex justifyContent="space-between" flexDirection={['column', 'column', 'row']} alignItems="center">
                 {/* Address Column */}
@@ -23,7 +22,7 @@ const Footer = () => {
                 {/* Social Media Column */}
                 <VStack alignItems="center" mb={[4, 4, 0]}>
                     <Text fontSize="lg" fontWeight="bold">Follow Us</Text>
-                    <Flex className='icons'>
+                    <Flex>
                         <IconButton
                             as={Link}
                             href="#"
