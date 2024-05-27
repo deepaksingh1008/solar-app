@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Box, Heading, Flex } from "@chakra-ui/react";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -12,6 +12,7 @@ const Home = () => {
     ]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState('forward');
+    const carouselRef = useRef(null);
 
     const handleChange = (index) => {
         setCurrentIndex(index);
@@ -35,8 +36,30 @@ const Home = () => {
         return () => clearInterval(interval);
     }, [direction, img.length]);
 
+    useEffect(() => {
+        const handleTouchMove = (e) => {
+            if (carouselRef.current) {
+                const { scrollHeight, clientHeight } = carouselRef.current;
+                if (scrollHeight > clientHeight) {
+                    e.stopPropagation();
+                }
+            }
+        };
+
+        const carouselNode = carouselRef.current;
+        if (carouselNode) {
+            carouselNode.addEventListener('touchmove', handleTouchMove);
+        }
+
+        return () => {
+            if (carouselNode) {
+                carouselNode.removeEventListener('touchmove', handleTouchMove);
+            }
+        };
+    }, []);
+
     return (
-        <Box>
+        <Box ref={carouselRef} height="100vh" overflowY="auto">
             <Carousel
                 showThumbs={false}
                 showStatus={false}
