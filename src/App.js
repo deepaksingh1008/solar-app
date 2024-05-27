@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Box, Flex } from "@chakra-ui/react";
+import ImageCarousel from "./components/Caresole/ImageCarousel";
 function App() {
   return (
     <Box minH="100vh" display="flex" flexDirection="column">
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<Home />} />
           </Routes>
         </Box>
+        {/* <ImageCarousel /> */}
         <Footer />
       </BrowserRouter>
     </Box>

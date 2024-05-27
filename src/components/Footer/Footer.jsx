@@ -15,14 +15,15 @@ const Footer = () => {
                 {/* Address Column */}
                 <VStack alignItems="flex-start" mb={[4, 4, 0]}>
                     <Text fontSize="lg" fontWeight="bold">Address</Text>
-                    <Text>123 Main Street</Text>
-                    <Text>City, State, ZIP</Text>
+                    <Text>Varanasi,Uttar Pradesh</Text>
+                    <Text>City, State, 221001</Text>
+                    <Text>Mobile No - 7309375095</Text>
                 </VStack>
 
                 {/* Social Media Column */}
                 <VStack alignItems="center" mb={[4, 4, 0]}>
                     <Text fontSize="lg" fontWeight="bold">Follow Us</Text>
-                    <Flex>
+                    <Flex className="icons">
                         <IconButton
                             as={Link}
                             href="#"
