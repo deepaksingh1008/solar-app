@@ -1,9 +1,15 @@
-import React from 'react'
+// src/components/Layout.js
+import React from "react";
+import { Box } from "@chakra-ui/react";
+import SocialMedia from "./SocialMedia";
 
 const Layout = ({ children }) => {
     return (
-        <div>Layout</div>
-    )
-}
+        <Box>
+            {children}
+            <SocialMedia /> {/* Add the SocialMedia component */}
+        </Box>
+    );
+};
 
-export default Layout
+export default Layout;
