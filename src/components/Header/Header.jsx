@@ -2,7 +2,7 @@ import { Box, Flex, Button, IconButton, useDisclosure, useMediaQuery, Image } fr
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import logo from '../../assets/logo2.png'; // Import your logo image
-
+import { Link } from "react-router-dom";
 const MotionBox = motion(Box);
 
 const Header = () => {
@@ -22,11 +22,14 @@ const Header = () => {
                     />
                 ) : (
                     <Flex>
-                        <Button variant="ghost">Home</Button>
-                        <Button variant="ghost">About</Button>
-                        <Button variant="ghost">Services</Button>
-                        <Button variant="ghost">Contact</Button>
-                        <Button variant="ghost">Blog</Button>
+                        <Link to='/'>
+                            <Button variant="ghost">Home</Button>
+                        </Link>
+                        <Link to='/about'><Button variant="ghost">About</Button></Link>
+
+                        <Link to='/services'> <Button variant="ghost">Services</Button></Link>
+                        <Link to='/contact'> <Button variant="ghost">Contact</Button></Link>
+                        <Link to='/blog'> <Button variant="ghost">Blog</Button></Link>
                     </Flex>
                 )}
             </Flex>
@@ -40,11 +43,14 @@ const Header = () => {
                     p={4}
                 >
                     <Flex direction="column">
-                        <Button variant="ghost">Home</Button>
-                        <Button variant="ghost">About</Button>
-                        <Button variant="ghost">Services</Button>
-                        <Button variant="ghost">Contact</Button>
-                        <Button variant="ghost">Blog</Button>
+                        <Link to='/'>
+                            <Button variant="ghost">Home</Button>
+                        </Link>
+                        <Link to='/about'><Button variant="ghost">About</Button></Link>
+
+                        <Link to='/services'> <Button variant="ghost">Services</Button></Link>
+                        <Link to='/contact'> <Button variant="ghost">Contact</Button></Link>
+                        <Link to='/blog'> <Button variant="ghost">Blog</Button></Link>
                     </Flex>
                 </MotionBox>
             )}
