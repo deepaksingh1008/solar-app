@@ -21,6 +21,10 @@ const Modals = () => {
     const [name, setName] = React.useState('');
     const [email, setEmail] = React.useState('');
     const [message, setMessage] = React.useState('');
+    const [phone, setPhone] = React.useState('')
+    const [city, setCity] = React.useState('');
+    const [project, setProject] = React.useState('');
+
     const initialRef = React.useRef(null);
     const finalRef = React.useRef(null);
 
@@ -29,6 +33,9 @@ const Modals = () => {
         const formData = {
             name,
             email,
+            phone,
+            city,
+            project,
             message
         };
 
@@ -44,6 +51,9 @@ const Modals = () => {
                 setName('');
                 setEmail('');
                 setMessage('');
+                setCity('')
+                setProject('')
+                setPhone('')
                 onClose();
             } else {
                 alert('There was an error sending your message. Please try again.');
@@ -80,16 +90,27 @@ const Modals = () => {
                     <ModalBody pb={6}>
                         <FormControl>
                             <FormLabel>Name</FormLabel>
-                            <Input ref={initialRef} placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
+                            <Input ref={initialRef} placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} required />
                         </FormControl>
-
+                        <FormControl>
+                            <FormLabel>Phone No</FormLabel>
+                            <Input ref={initialRef} placeholder='Phone No' value={phone} onChange={(e) => setPhone(e.target.value)} required />
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel>City</FormLabel>
+                            <Input ref={initialRef} placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} required />
+                        </FormControl>
                         <FormControl mt={4}>
                             <FormLabel>Email</FormLabel>
                             <Input type="email" placeholder='Email' required value={email} onChange={(e) => setEmail(e.target.value)} />
                         </FormControl>
+                        <FormControl>
+                            <FormLabel>Project(In Kw)</FormLabel>
+                            <Input ref={initialRef} placeholder='project' value={project} onChange={(e) => setProject(e.target.value)} required />
+                        </FormControl>
                         <FormControl mt={4}>
-                            <FormLabel>Message</FormLabel>
-                            <Textarea placeholder='Message' required value={message} onChange={(e) => setMessage(e.target.value)} />
+                            <FormLabel>Comment</FormLabel>
+                            <Textarea placeholder='Comment' required value={message} onChange={(e) => setMessage(e.target.value)} />
                         </FormControl>
                     </ModalBody>
 

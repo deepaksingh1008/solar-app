@@ -1,7 +1,8 @@
 import React from 'react'
-import { Box, Button, VStack, Text, Heading, Flex, Image, useMediaQuery, ChakraProvider, Grid } from '@chakra-ui/react';
+import { Box, Button, VStack, Text, Heading, Flex, Image, useMediaQuery, ChakraProvider, Grid, } from '@chakra-ui/react';
 import bgImage from '../../assets/bg-image.jpg';
 import { useNavigate } from 'react-router-dom'
+import QuoteModel from '../../components/Quote/QuoteModel';
 const SideBar = () => {
     const navigate = useNavigate();
     return (
@@ -83,7 +84,7 @@ const SideBar = () => {
                     backgroundPosition="center"
                 >
                     <Heading as="h4" size="md" m="4px" p="5px" mb="10px">For More Details</Heading>
-                    <Button
+                    {/* <Button
                         colorScheme="whiteAlpha"
                         variant="outline"
                         mb="2"
@@ -91,9 +92,11 @@ const SideBar = () => {
                         color="white"
                         _hover={{ bg: "green", color: "black" }}
                         transition="background-color 0.3s ease, color 0.3s ease"
+
                     >
-                        Request A Quote
-                    </Button>
+                       
+                    </Button> */}
+                    <QuoteModel />
                     <Text>+91 7309375095</Text>
                 </Box>
             </Box>

@@ -30,7 +30,7 @@ const HybridSolar = () => {
 
                 </Box>
             </Flex >
-            <SocialMedia />
+
         </>
     );
 }

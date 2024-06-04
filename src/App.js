@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Box, Flex } from "@chakra-ui/react";
-import ImageCarousel from "./components/Caresole/ImageCarousel";
+import Carousel from "./components/Caresole/Carousel";
 import MainCard from "./components/Card/MainCard";
 import About from "./pages/About/About";
 import Service from "./pages/Services/Service";
@@ -14,6 +14,8 @@ import OnGridSolar from "./pages/Solar/OnGridSolar";
 import OffGridSolar from "./pages/Solar/OffGridSolar";
 import HybridSolar from "./pages/Solar/HybridSolar";
 import ScrollToTop from "./hook/ScrollToTop";
+import SocialMedia from "./components/SocialMedia";
+import WhyChoose from "./components/WhyChoose";
 function App() {
   return (
     <BrowserRouter>
@@ -32,7 +34,7 @@ function App() {
           </Routes>
         </ScrollToTop>
       </Box>
-      {/* <ImageCarousel /> */}
+      <SocialMedia />
 
       <Footer />
     </BrowserRouter>

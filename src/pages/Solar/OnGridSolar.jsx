@@ -58,7 +58,7 @@ const OnGridSolar = () => {
                     </Flex>
                 </Box>
             </Flex>
-            <SocialMedia />
+
         </>
     );
 }

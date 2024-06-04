@@ -30,7 +30,7 @@ const OffGridSolar = () => {
 
                 </Box>
             </Flex>
-            <SocialMedia />
+
         </>
     );
 }
