@@ -4,12 +4,16 @@ import { Box, Flex, Heading, Text, Image, VStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Banner from '../../components/Banner';
 import img1 from '../../assets/banner.jpg'
+import AboutImage from '../../assets/about.jpg'
+import img2 from '../../assets/save-money.png'
+import img3 from '../../assets/roof.png'
+import img4 from '../../assets/plug.jpg'
 const About = () => {
     const MotionBox = motion(Box);
 
     return (
         <>
-            <Banner backgroundImage={img1} />
+            <Banner backgroundImage={img1} title={'About'} />
             <Box p={{ base: 4, md: 8 }}>
                 <Flex
                     direction={{ base: 'column', md: 'row' }}
@@ -24,7 +28,7 @@ const About = () => {
                         transition={{ duration: 1 }}
                     >
                         <Image
-                            src="path_to_your_image/solar-image1.jpg"
+                            src={AboutImage}
                             alt="Solar Panel Image"
                             borderRadius="md"
                             boxSize={{ base: '100%', md: '80%' }}
@@ -55,6 +59,7 @@ const About = () => {
                         </Text>
                     </MotionBox>
                 </Flex>
+
                 <Flex
                     direction={{ base: 'column', md: 'row' }}
                     justify="space-around"
@@ -65,12 +70,16 @@ const About = () => {
                         p={4}
                         flex="1"
                         minW={{ base: '100%', md: '30%' }}
+                        display='flex'
+                        flexDirection='column'
+                        justifyContent='center'
+                        alignItems='center'
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1, delay: 0.2 }}
                         mb={{ base: 4, md: 0 }}
                     >
-                        <Image src="https://simfoni.com/wp-content/uploads/2022/01/Cost-Reduction-Strategies-in-Procurement.png.webp" boxSize="50px" mb={4} />
+                        <Image src={img2} boxSize="100px" mb={4} />
                         <Heading as="h4" size="md" mb={2} textAlign="center">Enjoy Cost-Savings</Heading>
                         <Text textAlign="center">
                             Installing solar panels can help optimise underutilised roof space. Depending on your electricity consumption and roof size, you can enjoy greater cost savings, potentially cutting your electricity bills by up to 80%!
@@ -80,33 +89,42 @@ const About = () => {
                         p={4}
                         flex="1"
                         minW={{ base: '100%', md: '30%' }}
+                        display='flex'
+                        flexDirection='column'
+                        justifyContent='center'
+                        alignItems='center'
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 0.4 }}
-                        mb={{ base: 4, md: 0 }}
+                        transition={{ duration: 1, delay: 0.6 }}
                     >
-                        <Image src="https://simfoni.com/wp-content/uploads/2022/01/Cost-Reduction-Strategies-in-Procurement.png.webp" boxSize="50px" mb={4} />
-                        <Heading as="h4" size="md" mb={2} textAlign="center">Reduce Carbon Footprint</Heading>
+                        <Image src={img3} boxSize="100px" mb={4} />
+                        <Heading as="h4" size="md" mb={2} textAlign="center">Protect Your Roof</Heading>
                         <Text textAlign="center">
-                            Solar energy is one of the cleanest forms of energy available as it generates electricity without producing carbon dioxide. With sunny weather all year round, it is also a reliable source of renewable energy for your home.
+                            Excessive heat from the sun can cause warping of your roof. Installing solar panels for your home can thus act as an added shield, preventing direct sunlight and minimising heat influx into your living space.
                         </Text>
                     </MotionBox>
                     <MotionBox
                         p={4}
                         flex="1"
                         minW={{ base: '100%', md: '30%' }}
+                        display='flex'
+                        flexDirection='column'
+                        justifyContent='center'
+                        alignItems='center'
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 0.6 }}
+                        transition={{ duration: 1, delay: 0.4 }}
                         mb={{ base: 4, md: 0 }}
                     >
-                        <Image src="https://simfoni.com/wp-content/uploads/2022/01/Cost-Reduction-Strategies-in-Procurement.png.webp" boxSize="50px" mb={4} />
-                        <Heading as="h4" size="md" mb={2} textAlign="center">Protect Your Roof</Heading>
+                        <Image src={img4} boxSize="100px" mb={4} />
+                        <Heading as="h4" size="md" mb={2} textAlign="center">Reduce Carbon Footprint</Heading>
                         <Text textAlign="center">
-                            Excessive heat from the sun can cause warping of your roof. Installing solar panels for your home can thus act as an added shield, preventing direct sunlight and minimising heat influx into your living space.
+                            Solar energy is very clean because it makes electricity without creating pollution. Since we have sunny weather all year, it's also a reliable source of renewable energy for your home.
                         </Text>
                     </MotionBox>
                 </Flex>
+
+
             </Box>
         </>
     );

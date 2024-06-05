@@ -25,7 +25,7 @@ const Carousel = ({ images }) => {
     }, [currentIndex]); // Re-run the effect when currentIndex changes
 
     return (
-        <Box position="relative" width="full" height="600px" overflow="hidden"> {/* Adjusted the height */}
+        <Box position="relative" width="full" height="800px" overflow="hidden"> {/* Adjusted the height */}
             <Flex width="full" height="full">
                 {images.map((image, index) => (
                     <Box
@@ -44,7 +44,7 @@ const Carousel = ({ images }) => {
                             alt={`slide-${index}`}
                             objectFit="cover"
                             width="100%"
-                            height="80%"  // Adjust the height of the image here
+                            height="100%"  // Adjust the height of the image here
                         />
                     </Box>
                 ))}

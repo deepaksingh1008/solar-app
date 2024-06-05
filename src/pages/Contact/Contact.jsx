@@ -5,7 +5,7 @@ import call from '../../assets/svg/call.png';
 import gmail from '../../assets/svg/email.png';
 import location from '../../assets/svg/loaction.png';
 import Banner from '../../components/Banner';
-import img1 from '../../assets/banner.jpg'
+import img1 from '../../assets/contact_us.jpg'
 const MotionBox = motion(Box);
 const MotionVStack = motion(VStack);
 const MotionImage = motion(Image);
@@ -14,7 +14,7 @@ const ContactComponent = () => {
     return (
 
         <>
-            <Banner backgroundImage={img1} />
+            <Banner backgroundImage={img1} title={'Contact Us'} />
             <MotionVStack
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}

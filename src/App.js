@@ -16,6 +16,8 @@ import HybridSolar from "./pages/Solar/HybridSolar";
 import ScrollToTop from "./hook/ScrollToTop";
 import SocialMedia from "./components/SocialMedia";
 import WhyChoose from "./components/WhyChoose";
+import HomeServices from "./pages/Services/HomeServices";
+import CommercialServices from "./pages/Services/CommercialServices";
 function App() {
   return (
     <BrowserRouter>
@@ -31,6 +33,11 @@ function App() {
             <Route path="/on-grid-solar" element={<OnGridSolar />} />
             <Route path="/off-grid-solar" element={<OffGridSolar />} />
             <Route path="/hybrid" element={<HybridSolar />} />
+            <Route
+              path="/commercial-services"
+              element={<CommercialServices />}
+            ></Route>
+            <Route path="/home-services" element={<HomeServices />}></Route>
           </Routes>
         </ScrollToTop>
       </Box>

@@ -1,5 +1,3 @@
-// WhyChooseShivaSakthi.js
-
 import React from 'react';
 import {
   Box,
@@ -14,46 +12,44 @@ import { BsLightningFill } from 'react-icons/bs';
 
 const WhyChoose = () => {
   return (
-    <Box p={10} bg="white">
-      <Text fontSize="4xl" fontWeight="bold" textAlign="center" mb={4}>
+    <Box p={{ base: 5, md: 10 }} bg="white">
+      <Text fontSize={{ base: "xl", md: "4xl" }} fontWeight="600" textAlign="center" mb={{ base: 2, md: 4 }}>
         Why Choose Sanskriti
       </Text>
-      <Text fontSize="lg" textAlign="center" mb={10}>
+      <Text fontSize={{ base: "md", md: "lg" }} textAlign="center" mb={{ base: 5, md: 10 }}>
         We strive to make a positive impact on the environment while helping
-        <Text>
-          our clients reduce their carbon footprint and energy costs.
-        </Text>
+        our clients reduce their carbon footprint and energy costs.
       </Text>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={{ base: 5, md: 10 }}>
         <Flex direction="column" align="center" textAlign="center">
-          <Icon as={FiFileText} boxSize={10} mb={4} />
-          <Text fontSize="xl" fontWeight="bold">Best Quality</Text>
-          <Text>Get the best products in market.</Text>
+          <Icon as={FiFileText} boxSize={{ base: 8, md: 10 }} mb={4} color="teal.500" />
+          <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="bold">Best Quality</Text>
+          <Text fontSize={{ base: "sm", md: "md" }}>Get the best products in market.</Text>
         </Flex>
         <Flex direction="column" align="center" textAlign="center">
-          <Icon as={FaMoneyBillWave} boxSize={10} mb={4} />
-          <Text fontSize="xl" fontWeight="bold">Low Installation Cost</Text>
-          <Text>Unbeatable price from Installers.</Text>
+          <Icon as={FaMoneyBillWave} boxSize={{ base: 8, md: 10 }} mb={4} color="green.500" />
+          <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="bold">Low Installation Cost</Text>
+          <Text fontSize={{ base: "sm", md: "md" }}>Unbeatable price from Installers.</Text>
         </Flex>
         <Flex direction="column" align="center" textAlign="center">
-          <Icon as={BsLightningFill} boxSize={10} mb={4} />
-          <Text fontSize="xl" fontWeight="bold">Value</Text>
-          <Text>We Provide Best Value for Money.</Text>
+          <Icon as={BsLightningFill} boxSize={{ base: 8, md: 10 }} mb={4} color="yellow.500" />
+          <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="bold">Value</Text>
+          <Text fontSize={{ base: "sm", md: "md" }}>We Provide Best Value for Money.</Text>
         </Flex>
         <Flex direction="column" align="center" textAlign="center">
-          <Icon as={FaSmile} boxSize={10} mb={4} />
-          <Text fontSize="xl" fontWeight="bold">Convenient</Text>
-          <Text>Hassle free experience.</Text>
+          <Icon as={FaSmile} boxSize={{ base: 8, md: 10 }} mb={4} color="orange.500" />
+          <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="bold">Convenient</Text>
+          <Text fontSize={{ base: "sm", md: "md" }}>Hassle free experience.</Text>
         </Flex>
         <Flex direction="column" align="center" textAlign="center">
-          <Icon as={FaClock} boxSize={10} mb={4} />
-          <Text fontSize="xl" fontWeight="bold">Timing Saving</Text>
-          <Text>Single point of contact.</Text>
+          <Icon as={FaClock} boxSize={{ base: 8, md: 10 }} mb={4} color="blue.500" />
+          <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="bold">Timing Saving</Text>
+          <Text fontSize={{ base: "sm", md: "md" }}>Single point of contact.</Text>
         </Flex>
         <Flex direction="column" align="center" textAlign="center">
-          <Icon as={FaWrench} boxSize={10} mb={4} />
-          <Text fontSize="xl" fontWeight="bold">Transparent</Text>
-          <Text>Detailed Project Report.</Text>
+          <Icon as={FaWrench} boxSize={{ base: 8, md: 10 }} mb={4} color="red.500" />
+          <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="bold">Transparent</Text>
+          <Text fontSize={{ base: "sm", md: "md" }}>Detailed Project Report.</Text>
         </Flex>
       </SimpleGrid>
     </Box>
