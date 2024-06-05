@@ -21,7 +21,7 @@ const Modals = () => {
     const [name, setName] = React.useState('');
     const [email, setEmail] = React.useState('');
     const [message, setMessage] = React.useState('');
-    const [phone, setPhone] = React.useState('')
+    const [phone, setPhone] = React.useState('');
     const [city, setCity] = React.useState('');
     const [project, setProject] = React.useState('');
 
@@ -30,6 +30,11 @@ const Modals = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!name || !email || !phone || !city || !project || !message) {
+            alert('All fields are required!');
+            return;
+        }
+
         const formData = {
             name,
             email,
@@ -51,9 +56,9 @@ const Modals = () => {
                 setName('');
                 setEmail('');
                 setMessage('');
-                setCity('')
-                setProject('')
-                setPhone('')
+                setCity('');
+                setProject('');
+                setPhone('');
                 onClose();
             } else {
                 alert('There was an error sending your message. Please try again.');
@@ -88,38 +93,39 @@ const Modals = () => {
                     <ModalHeader>Send Us a Message</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody pb={6}>
-                        <FormControl>
-                            <FormLabel>Name</FormLabel>
-                            <Input ref={initialRef} placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} required />
-                        </FormControl>
-                        <FormControl>
-                            <FormLabel>Phone No</FormLabel>
-                            <Input ref={initialRef} placeholder='Phone No' value={phone} onChange={(e) => setPhone(e.target.value)} required />
-                        </FormControl>
-                        <FormControl>
-                            <FormLabel>City</FormLabel>
-                            <Input ref={initialRef} placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} required />
-                        </FormControl>
-                        <FormControl mt={4}>
-                            <FormLabel>Email</FormLabel>
-                            <Input type="email" placeholder='Email' required value={email} onChange={(e) => setEmail(e.target.value)} />
-                        </FormControl>
-                        <FormControl>
-                            <FormLabel>Project(In Kw)</FormLabel>
-                            <Input ref={initialRef} placeholder='project' value={project} onChange={(e) => setProject(e.target.value)} required />
-                        </FormControl>
-                        <FormControl mt={4}>
-                            <FormLabel>Comment</FormLabel>
-                            <Textarea placeholder='Comment' required value={message} onChange={(e) => setMessage(e.target.value)} />
-                        </FormControl>
+                        <form onSubmit={handleSubmit}>
+                            <FormControl isRequired>
+                                <FormLabel>Name</FormLabel>
+                                <Input ref={initialRef} placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
+                            </FormControl>
+                            <FormControl isRequired>
+                                <FormLabel>Phone No</FormLabel>
+                                <Input placeholder='Phone No' value={phone} onChange={(e) => setPhone(e.target.value)} />
+                            </FormControl>
+                            <FormControl isRequired>
+                                <FormLabel>City</FormLabel>
+                                <Input placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} />
+                            </FormControl>
+                            <FormControl mt={4} isRequired>
+                                <FormLabel>Email</FormLabel>
+                                <Input type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+                            </FormControl>
+                            <FormControl isRequired>
+                                <FormLabel>Project (In Kw)</FormLabel>
+                                <Input placeholder='Project' value={project} onChange={(e) => setProject(e.target.value)} />
+                            </FormControl>
+                            <FormControl mt={4} >
+                                <FormLabel>Comment</FormLabel>
+                                <Textarea placeholder='Comment' value={message} onChange={(e) => setMessage(e.target.value)} />
+                            </FormControl>
+                            <ModalFooter>
+                                <Button colorScheme='blue' type="submit" mr={3}>
+                                    Send Message
+                                </Button>
+                                <Button onClick={onClose}>Cancel</Button>
+                            </ModalFooter>
+                        </form>
                     </ModalBody>
-
-                    <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={handleSubmit}>
-                            Send Message
-                        </Button>
-                        <Button onClick={onClose}>Cancel</Button>
-                    </ModalFooter>
                 </ModalContent>
             </Modal>
         </>

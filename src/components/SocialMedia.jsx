@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, IconButton } from "@chakra-ui/react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaPhone, FaWhatsapp } from "react-icons/fa";
 
 const SocialMedia = () => {
     return (
@@ -43,18 +43,18 @@ const SocialMedia = () => {
             />
             <IconButton
                 as="a"
-                href="https://www.linkedin.com"
-                aria-label="LinkedIn"
-                icon={<FaLinkedin />}
+                href="https://wa.me/+919305175469"
+                aria-label="WhatsApp"
+                icon={<FaWhatsapp />}
                 mb={2}
-                colorScheme="linkedin"
+                colorScheme="green"
             />
             <IconButton
                 as="a"
-                href="https://wa.me/yourphonenumber"
-                aria-label="WhatsApp"
-                icon={<FaWhatsapp />}
-                colorScheme="green"
+                href="tel:+919305175469" // Replace with your actual phone number
+                aria-label="Call"
+                icon={<FaPhone />}
+                colorScheme="teal"
             />
         </Box>
     );
