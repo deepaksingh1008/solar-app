@@ -43,7 +43,7 @@ const SolarServices = () => {
                     animation={`${bounceAnimation} 2s infinite`}
                 >
                     <Image src={HomeImage} alt="Solar Panels For Homes" boxSize="150px" mb={4} />
-                    <Heading size="md" mb={4}>Solar Panels For Homes</Heading>
+                    <Heading size="md" mb={4}>Home Solar Panels</Heading>
                     <Text mb={4}>
                         Go solar for your home with India's first Rent-To-Own solar programme or opt for an upfront purchase plan.
                     </Text>
