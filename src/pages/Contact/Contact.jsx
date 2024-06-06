@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, VStack, Text, Input, Button, FormControl, FormLabel, Textarea, SimpleGrid, GridItem, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import call from '../../assets/svg/call.png';
@@ -6,13 +6,50 @@ import gmail from '../../assets/svg/email.png';
 import location from '../../assets/svg/loaction.png';
 import Banner from '../../components/Banner';
 import img1 from '../../assets/contact_us.jpg'
+import axios from 'axios'
 const MotionBox = motion(Box);
 const MotionVStack = motion(VStack);
 const MotionImage = motion(Image);
 
 const ContactComponent = () => {
-    return (
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        mobile: '',
+        message: ''
+    });
 
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        // console.log(formData)
+        try {
+            const response = await axios.post('https://api.web3forms.com/submit', {
+                access_key: process.env.REACT_APP_API_KEY, // Replace with your actual Web3Forms access key
+                ...formData
+            });
+
+            if (response.data.success) {
+                alert('Message sent successfully!');
+                // Reset form fields
+                setFormData({})
+            } else {
+                alert('There was an error sending your message. Please try again.');
+            }
+        } catch (error) {
+            console.error('There was an error!', error);
+            alert('There was an error sending your message. Please try again.');
+        }
+    };
+
+    return (
         <>
             <Banner backgroundImage={img1} title={'Contact Us'} />
             <MotionVStack
@@ -24,7 +61,7 @@ const ContactComponent = () => {
             >
                 <Box textAlign="center">
                     <Text fontSize="4xl" fontWeight="bold">Let's Talk</Text>
-                    <Text fontSize="md" color="gray.500">Got a project on your mind? Let's discuss about the details.</Text>
+                    <Text fontSize="md" color="gray.500">Got a project on your mind? Let's discuss the details.</Text>
                 </Box>
 
                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} w="100%">
@@ -46,7 +83,6 @@ const ContactComponent = () => {
                                 borderRadius="full"
                                 boxShadow="0 0 10px rgba(0, 0, 0, 0.1)"
                                 p={1}
-
                             >
                                 <MotionImage
                                     src={location}
@@ -59,9 +95,8 @@ const ContactComponent = () => {
                             </Box>
                             <Text fontSize="xl" fontWeight="bold" ml={4}>Location</Text>
                         </Box>
-                        <Text>No. 4, Gowthamaman Street,</Text>
-                        <Text>Varanasi</Text>
-                        <Text>Varanasi</Text>
+                        <Text>Vishwanathpuram Colony, Awaleshpur, Chitaipur, Varanasi</Text>
+                        <Text>Varanasi, Uttar Pradesh, 221106</Text>
                     </MotionBox>
 
                     <MotionBox
@@ -94,8 +129,7 @@ const ContactComponent = () => {
                             </Box>
                             <Text fontSize="xl" fontWeight="bold" ml={4}>Mobile</Text>
                         </Box>
-                        <Text>+91 1324 4453 0046</Text>
-                        <Text>044 4232 5620 0000</Text>
+                        <Text>+917309375095</Text>
                     </MotionBox>
 
                     <MotionBox
@@ -128,7 +162,7 @@ const ContactComponent = () => {
                             </Box>
                             <Text fontSize="xl" fontWeight="bold" ml={4}>E-Mail</Text>
                         </Box>
-                        <Text>deepak@outlook.com</Text>
+                        <Text> sanskritisolar@gmail.com</Text>
                     </MotionBox>
                 </SimpleGrid>
 
@@ -139,7 +173,7 @@ const ContactComponent = () => {
                         </Box>
                         <Box>
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14368.85620747191!2d82.97391405720545!3d25.31410483823788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31dc6b7f5b71%3A0xf0c9d03e77d84d2b!2sVaranasi%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2sus!4v1595156190380!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3605.221573814952!2d82.99632312540517!3d25.363889474928857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1717593569649!5m2!1sen!2sin"
                                 width="100%"
                                 height="300"
                                 frameBorder="0"
@@ -157,22 +191,41 @@ const ContactComponent = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.5, delay: 0.8 }}
                             >
-                                <form>
+                                <form onSubmit={handleSubmit}>
                                     <FormControl mb={4}>
                                         <FormLabel>Your Name</FormLabel>
-                                        <Input type="text" />
+                                        <Input
+                                            type="text"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleInputChange}
+                                        />
                                     </FormControl>
                                     <FormControl mb={4}>
                                         <FormLabel>Your Email</FormLabel>
-                                        <Input type="email" />
+                                        <Input
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleInputChange}
+                                        />
                                     </FormControl>
                                     <FormControl mb={4}>
                                         <FormLabel>Your Mobile</FormLabel>
-                                        <Input type="tel" />
+                                        <Input
+                                            type="tel"
+                                            name="mobile"
+                                            value={formData.mobile}
+                                            onChange={handleInputChange}
+                                        />
                                     </FormControl>
                                     <FormControl mb={4}>
                                         <FormLabel>Your Message (optional)</FormLabel>
-                                        <Textarea />
+                                        <Textarea
+                                            name="message"
+                                            value={formData.message}
+                                            onChange={handleInputChange}
+                                        />
                                     </FormControl>
                                     <Button colorScheme="green" type="submit">Submit</Button>
                                 </form>
@@ -180,7 +233,8 @@ const ContactComponent = () => {
                         </Box>
                     </GridItem>
                 </SimpleGrid>
-            </MotionVStack></>
+            </MotionVStack>
+        </>
     );
 };
 

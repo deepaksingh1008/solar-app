@@ -9,7 +9,7 @@ const MainCard = () => {
 
     return (
         <Box py={8} px={4}>
-            <Heading as="h1" size="xl" textAlign="center" mb={8}>Our Products</Heading>
+            <Heading as="h1" size="xl" textAlign="center" mb={8}>Our Services</Heading>
             <Flex justify="center" wrap="wrap">
                 <Card image={OffGrid} name={'On Grid Solar System'} nav={'/on-grid-solar'} />
                 <Card image={OnGrid} name={'Off Grid Solar System'} nav={'/off-grid-solar'} />

@@ -19,23 +19,23 @@ const SocialMedia = () => {
         >
             <IconButton
                 as="a"
-                href="https://www.facebook.com"
+                href=" https://www.facebook.com/profile.php?id=61559821108879"
                 aria-label="Facebook"
                 icon={<FaFacebook />}
                 mb={2}
                 colorScheme="facebook"
             />
-            <IconButton
+            {/* <IconButton
                 as="a"
                 href="https://www.twitter.com"
                 aria-label="Twitter"
                 icon={<FaTwitter />}
                 mb={2}
                 colorScheme="twitter"
-            />
+            /> */}
             <IconButton
                 as="a"
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/sanskritisolar?igsh=aXdscmVqenplNTdm"
                 aria-label="Instagram"
                 icon={<FaInstagram />}
                 mb={2}
@@ -43,7 +43,7 @@ const SocialMedia = () => {
             />
             <IconButton
                 as="a"
-                href="https://wa.me/+919305175469"
+                href="https://wa.me/+917309375095"
                 aria-label="WhatsApp"
                 icon={<FaWhatsapp />}
                 mb={2}
@@ -51,7 +51,7 @@ const SocialMedia = () => {
             />
             <IconButton
                 as="a"
-                href="tel:+919305175469" // Replace with your actual phone number
+                href="tel:+917309375095" // Replace with your actual phone number
                 aria-label="Call"
                 icon={<FaPhone />}
                 colorScheme="teal"

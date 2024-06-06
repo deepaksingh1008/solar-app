@@ -1,5 +1,7 @@
+import React from "react";
 import { Box, Flex, Text, Link, VStack, IconButton } from "@chakra-ui/react";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { Link as Li } from "react-router-dom";
 import styled from "@emotion/styled";
 
 // StyledBox component with animation
@@ -53,9 +55,9 @@ const Footer = () => {
                     <Text fontSize="lg" fontWeight="bold">
                         Address
                     </Text>
-                    <Text>Varanasi, Uttar Pradesh</Text>
-                    <Text>City, State, 221001</Text>
-                    <Text>Mobile No - 7309375095</Text>
+                    <Text>Vishwanathpuram Colony, Awaleshpur, Chitaipur, Varanasi</Text>
+                    <Text>Varanasi, Uttar Pradesh, 221106</Text>
+                    <Text>Mobile No - +917309375095</Text>
                 </VStack>
 
                 {/* Social Media Column */}
@@ -66,7 +68,7 @@ const Footer = () => {
                     <Flex className="icons">
                         <IconButton
                             as={Link}
-                            href="#"
+                            href="https://www.facebook.com/profile.php?id=61559821108879"
                             aria-label="Facebook"
                             icon={<FaFacebook />}
                             variant="ghost"
@@ -74,24 +76,27 @@ const Footer = () => {
                             _hover={{ color: "#1877F2" }}
                             isRound
                         />
+
                         <IconButton
                             as={Link}
-                            href="#"
-                            aria-label="Twitter"
-                            icon={<FaTwitter />}
-                            variant="ghost"
-                            color="white"
-                            _hover={{ color: "#1DA1F2" }}
-                            isRound
-                        />
-                        <IconButton
-                            as={Link}
-                            href="#"
+                            href="https://www.instagram.com/sanskritisolar?igsh=aXdscmVqenplNTdm"
                             aria-label="Instagram"
                             icon={<FaInstagram />}
                             variant="ghost"
                             color="white"
                             _hover={{ color: "#E1306C" }}
+                            isRound
+                        />
+
+                        {/* WhatsApp Icon */}
+                        <IconButton
+                            as={Link}
+                            href="https://wa.me/+917309375095"
+                            aria-label="WhatsApp"
+                            icon={<FaWhatsapp />}
+                            variant="ghost"
+                            color="white"
+                            _hover={{ color: "#25d366" }}
                             isRound
                         />
                     </Flex>
@@ -103,9 +108,9 @@ const Footer = () => {
                     <Text fontSize="lg" fontWeight="bold">
                         Information
                     </Text>
-                    <Link href="#">Privacy Policy</Link>
-                    <Link href="#">Terms of Service</Link>
-                    <Link href="#">Contact Us</Link>
+                    <Li to='/'>Home</Li>
+                    <Li to='/about'>About</Li>
+                    <Li to='/contact'>Contact Us</Li>
                 </VStack>
             </Flex>
         </StyledBox>
