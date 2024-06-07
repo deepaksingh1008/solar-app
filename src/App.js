@@ -21,6 +21,8 @@ import CommercialServices from "./pages/Services/CommercialServices";
 import Product from "./pages/product/Product";
 import OrderForm from "./pages/product/OrderForm";
 import SubsidyDetails from "./pages/subsity/SubsidyDetails";
+import ProductNotFound from "./components/ProductNotFound";
+import Blog from "./pages/blog/Blog";
 function App() {
   return (
     <BrowserRouter>
@@ -38,8 +40,10 @@ function App() {
             <Route path="/hybrid" element={<HybridSolar />} />
             <Route path="/product" element={<Product />} />
             <Route path="/order/:id" element={<OrderForm />} />
+            {/* <Route path="/blog" element={<Blog />} /> */}
             <Route path="/hybrid" element={<HybridSolar />} />
             <Route path="/subsidy" element={<SubsidyDetails />} />
+            <Route path="/*" element={<ProductNotFound />} />
             <Route
               path="/commercial-services"
               element={<CommercialServices />}

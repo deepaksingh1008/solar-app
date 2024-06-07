@@ -108,11 +108,11 @@ const Header = () => {
                                 Product
                             </Button>
                         </Link>
-                        <Link to="/blog">
+                        {/* <Link to="/blog">
                             <Button variant="ghost" _hover={{ bg: "teal.600" }} {...sharedButtonStyles}>
                                 Blog
                             </Button>
-                        </Link>
+                        </Link> */}
                     </Flex>
                 )}
             </Flex>
@@ -184,11 +184,11 @@ const Header = () => {
                                 Product
                             </Button>
                         </Link>
-                        <Link to="/blog">
+                        {/* <Link to="/blog">
                             <Button variant="ghost" _hover={{ bg: "teal.600" }} {...sharedButtonStyles} w="100%">
                                 Blog
                             </Button>
-                        </Link>
+                        </Link> */}
                     </Flex>
                 </MotionBox>
             )}
