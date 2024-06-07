@@ -43,7 +43,7 @@ const SolarServices = () => {
                     animation={`${bounceAnimation} 2s infinite`}
                 >
                     <Image src={HomeImage} alt="Solar Panels For Homes" boxSize="150px" mb={4} />
-                    <Heading size="md" mb={4}>Home Solar Panels</Heading>
+                    <Heading size="md" mb={4}>Rooftop solar project</Heading>
                     <Text mb={4}>
                         Go solar for your home with India's first Rent-To-Own solar programme or opt for an upfront purchase plan.
                     </Text>
@@ -60,7 +60,7 @@ const SolarServices = () => {
                     animation={`${bounceAnimation} 2s infinite`}
                 >
                     <Image src={CommercialImage} boxSize="150px" mb={4} />
-                    <Heading size="md" mb={4}>Commercial Solar Panels</Heading>
+                    <Heading size="md" mb={4}>Commercial Solar project</Heading>
                     <Text mb={4}>
                         Embrace sustainability for your business through a Power Purchase Agreement (PPA) or an upfront purchase plan.
                     </Text>

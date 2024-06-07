@@ -16,7 +16,7 @@ const fadeIn = keyframes`
 const CommercialServices = () => {
     return (
         <>
-            <Banner backgroundImage={commercialBg} title={'Commercial Solar Services'} />
+            <Banner backgroundImage={commercialBg} title={'Commercial Solar project'} />
             <Box p={5} animation={`${fadeIn} 2s ease-in-out`}>
                 <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="center" gap={6}>
                     <Image
@@ -39,7 +39,7 @@ const CommercialServices = () => {
                         <Flex align="center" mb={4}>
                             <Box as={FaSolarPanel} color="green.400" boxSize={10} mr={3} />
                             <Heading size="lg" color="green.500">
-                                Solar For Commercial
+                                Commercial Solar project
                             </Heading>
                         </Flex>
                         <Text fontSize="md" color="gray.600">
