@@ -14,7 +14,7 @@ const WhyChoose = () => {
   return (
     <Box p={{ base: 5, md: 10 }} bg="white">
       <Text fontSize={{ base: "xl", md: "4xl" }} fontWeight="600" textAlign="center" mb={{ base: 2, md: 4 }}>
-        Why Choose Sanskriti
+        Why Choose Sanskriti Solar
       </Text>
       <Text fontSize={{ base: "md", md: "lg" }} textAlign="center" mb={{ base: 5, md: 10 }}>
         We strive to make a positive impact on the environment while helping

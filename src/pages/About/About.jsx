@@ -13,7 +13,7 @@ const About = () => {
 
     return (
         <>
-            <Banner backgroundImage={img1} title={'About'} />
+            <Banner backgroundImage={img1} title={'ABOUT'} />
             <Box p={{ base: 4, md: 8 }}>
                 <Flex
                     direction={{ base: 'column', md: 'row' }}
@@ -43,10 +43,10 @@ const About = () => {
                         transition={{ duration: 1 }}
                     >
                         <Heading as="h2" size="xl" mb={4}>
-                            Who we are and what we do
+                            WHO WE ARE AND WHAT WE DO
                         </Heading>
                         <Heading as="h3" size="lg" mb={4} color="blue.600">
-                            Sanskriti Solar
+                            SANSKRITI SOLAR
                         </Heading>
                         <Text fontSize={{ base: 'md', md: 'lg' }} mb={4}>
                             We are one of the leading solar system integrators and suppliers of premium brands in Varanasi, with 5 years of experience in solar power projects for the residential and commercial sectors.

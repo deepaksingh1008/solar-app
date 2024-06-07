@@ -29,6 +29,7 @@ const Modals = () => {
     const finalRef = React.useRef(null);
 
     const handleSubmit = async (e) => {
+        console.log('process.env.REACT_APP_API_KEY', process.env.REACT_APP_API_KEY)
         e.preventDefault();
         if (!name || !email || !phone || !city || !project || !message) {
             alert('All fields are required!');
@@ -71,14 +72,24 @@ const Modals = () => {
 
     //handle call
     const handleCall = () => {
-        window.location.href = `tel:+919305175469`;
+        window.location.href = `tel:+917309375095`;
     };
 
     return (
         <>
             <Flex direction={{ base: "column", md: "row" }} align="center" justify="center" gap={{ base: 2, md: 4 }}>
-                <Button onClick={onOpen} colorScheme="teal" mr={{ base: 0, md: 4 }}>Contact Us</Button>
-                <Button ml={{ base: 0, md: 4 }} ref={finalRef} onClick={handleCall} bgColor='#1c73ff' color='white'>
+                <Button onClick={onOpen} colorScheme="teal" mr={{ base: 0, md: 4 }} _hover={{ bg: '#165bbd', transform: 'scale(1.05)' }}
+                    transition="all 0.2s ease-in-out" p={{ base: 4, md: 6 }} bgColor=''>Contact Us</Button>
+                <Button
+                    ml={{ base: 0, md: 4 }}
+                    ref={finalRef}
+                    onClick={handleCall}
+                    bgColor='#1c73ff'
+                    color='white'
+                    p={{ base: 4, md: 6 }}
+                    _hover={{ bg: '#165bbd', transform: 'scale(1.05)' }}
+                    transition="all 0.2s ease-in-out"
+                >
                     Call Me
                 </Button>
             </Flex>

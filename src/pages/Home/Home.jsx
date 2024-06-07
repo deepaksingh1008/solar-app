@@ -13,7 +13,7 @@ import img3 from '../../assets/s3.jpeg';
 import img4 from '../../assets/s4.jpg';
 import WhyChoose from "../../components/WhyChoose";
 import OurServices from '../../components/OurServices'
-
+import Subsidy from '../../pages/subsity/Subsity'
 const Home = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const images = [
@@ -83,20 +83,24 @@ const Home = () => {
                         align="center"
                         gap={{ base: 2, md: 4 }} // Add gap between buttons
                     >
-                        <QuoteModel />
+                        <QuoteModel bg={'#6371e0'} />
                     </Flex>
                 </Flex>
+            </Box>
+            <Box p={5} ml={{ base: '0', md: '100px' }} mr={{ base: '0', md: '100px' }}>
+
+                <Subsidy />
             </Box>
             <Box p={4}>
                 <MainCard />
             </Box>
             {/* Render Carousel only on non-mobile devices */}
-            {!isMobile && (
-                <Box p={5}>
-                    <Heading mb={5}>React Carousel</Heading>
-                    <Carousel images={img} />
-                </Box>
-            )}
+
+            <Box p={5}>
+                {/* <Heading mb={5}>React Carousel</Heading> */}
+                <Carousel images={img} />
+            </Box>
+
             <Box p={5} ml={{ base: '0', md: '100px' }} mr={{ base: '0', md: '100px' }}>
                 <WhyChoose />
             </Box>

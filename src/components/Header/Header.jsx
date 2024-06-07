@@ -103,11 +103,16 @@ const Header = () => {
                                 Contact
                             </Button>
                         </Link>
-                        {/* <Link to="/blog">
+                        <Link to="/product">
+                            <Button variant="ghost" _hover={{ bg: "teal.600" }} {...sharedButtonStyles}>
+                                Product
+                            </Button>
+                        </Link>
+                        <Link to="/blog">
                             <Button variant="ghost" _hover={{ bg: "teal.600" }} {...sharedButtonStyles}>
                                 Blog
                             </Button>
-                        </Link> */}
+                        </Link>
                     </Flex>
                 )}
             </Flex>
@@ -174,11 +179,16 @@ const Header = () => {
                                 Contact
                             </Button>
                         </Link>
-                        {/* <Link to="/blog">
+                        <Link to="/product">
+                            <Button variant="ghost" _hover={{ bg: "teal.600" }} {...sharedButtonStyles} w="100%">
+                                Product
+                            </Button>
+                        </Link>
+                        <Link to="/blog">
                             <Button variant="ghost" _hover={{ bg: "teal.600" }} {...sharedButtonStyles} w="100%">
                                 Blog
                             </Button>
-                        </Link> */}
+                        </Link>
                     </Flex>
                 </MotionBox>
             )}

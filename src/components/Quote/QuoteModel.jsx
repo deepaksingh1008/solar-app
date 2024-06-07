@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import axios from 'axios';
 
-const QuoteModel = () => {
+const QuoteModel = ({ bg }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const initialRef = React.useRef(null);
     const finalRef = React.useRef(null);
@@ -67,9 +67,11 @@ const QuoteModel = () => {
                 colorScheme="whiteAlpha"
                 variant="outline"
                 mb={{ base: 2, md: 4 }}
+                bg={bg}
+                p='20px'
                 border="3px solid white"
                 color="white"
-                _hover={{ bg: "green", color: "black" }}
+                _hover={{ bg: "green", color: "black", }}
                 transition="background-color 0.3s ease, color 0.3s ease"
                 onClick={onOpen}
             >

@@ -25,7 +25,7 @@ const Carousel = ({ images }) => {
     }, [currentIndex]); // Re-run the effect when currentIndex changes
 
     return (
-        <Box position="relative" width="full" height="800px" overflow="hidden"> {/* Adjusted the height */}
+        <Box position="relative" width="full" height={{ base: '300px', sm: '400px', md: '600px', lg: '800px' }} overflow="hidden">
             <Flex width="full" height="full">
                 {images.map((image, index) => (
                     <Box
@@ -39,13 +39,15 @@ const Carousel = ({ images }) => {
                         alignItems="center"
                         justifyContent="center"
                     >
-                        <Image
-                            src={image}
-                            alt={`slide-${index}`}
-                            objectFit="cover"
-                            width="100%"
-                            height="100%"  // Adjust the height of the image here
-                        />
+                        <a href={image} target="_blank" rel="noopener noreferrer">
+                            <Image
+                                src={image}
+                                alt={`slide-${index}`}
+                                objectFit="cover"
+                                width="100%"
+                                height="100%"
+                            />
+                        </a>
                     </Box>
                 ))}
             </Flex>
@@ -53,23 +55,27 @@ const Carousel = ({ images }) => {
             <IconButton
                 icon={<FaArrowLeft />}
                 position="absolute"
-                left={5}
+                left={{ base: 1, md: 2 }}
                 top="50%"
                 transform="translateY(-50%)"
                 onClick={prevSlide}
                 aria-label="Previous Slide"
                 zIndex={2}
+                size={{ base: 'sm', md: 'md', lg: 'lg' }}
+                p={{ base: 1, md: 2 }}
             />
 
             <IconButton
                 icon={<FaArrowRight />}
                 position="absolute"
-                right={5}
+                right={{ base: 1, md: 2 }}
                 top="50%"
                 transform="translateY(-50%)"
                 onClick={nextSlide}
                 aria-label="Next Slide"
                 zIndex={2}
+                size={{ base: 'sm', md: 'md', lg: 'lg' }}
+                p={{ base: 1, md: 2 }}
             />
         </Box>
     );
