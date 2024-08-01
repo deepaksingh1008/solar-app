@@ -6,6 +6,7 @@ import gmail from '../../assets/svg/email.png';
 import location from '../../assets/svg/loaction.png';
 import Banner from '../../components/Banner';
 import img1 from '../../assets/contact_us.jpg'
+import { Helmet } from 'react-helmet';
 import axios from 'axios'
 const MotionBox = motion(Box);
 const MotionVStack = motion(VStack);
@@ -51,6 +52,15 @@ const ContactComponent = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Contact Us | Sanskriti Solar</title>
+                <meta name="description" content="Get in touch with Sanskriti Solar for your solar power needs. Contact us via phone, email, or visit us at our location in Varanasi. Fill out the form to request a callback or more information." />
+                <meta name="keywords" content="contact Sanskriti Solar, solar power Varanasi, solar panel contact form, solar installation contact" />
+                <meta property="og:title" content="Contact Us | Sanskriti Solar" />
+                <meta property="og:description" content="Get in touch with Sanskriti Solar for your solar power needs. Contact us via phone, email, or visit us at our location in Varanasi. Fill out the form to request a callback or more information." />
+                <meta property="og:image" content={img1} />
+                <meta property="og:url" content="https://sanskritisolar.in/contact" />
+            </Helmet>
             <Banner backgroundImage={img1} title={'Contact Us'} />
             <MotionVStack
                 initial={{ opacity: 0, y: 50 }}

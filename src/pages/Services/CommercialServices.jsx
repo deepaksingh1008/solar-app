@@ -4,6 +4,7 @@ import { FaSolarPanel } from 'react-icons/fa';
 import commercialImage from '../../assets/commercial.jpg'
 import Banner from '../../components/Banner';
 import commercialBg from '../../assets/commercialbg.jpg'
+import { Helmet } from 'react-helmet';
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -16,6 +17,14 @@ const fadeIn = keyframes`
 const CommercialServices = () => {
     return (
         <>
+            <Helmet>
+                <title>Commercial Solar System Services | Sanskriti Solar</title>
+                <meta name="description" content="Explore our commercial solar system services at Sanskriti Solar. We offer comprehensive solar solutions for industries, helping to reduce grid power usage and save costs." />
+                <meta name="keywords" content="commercial solar system, solar power for industries, solar installation, Sanskriti Solar" />
+                <meta property="og:title" content="Commercial Solar System Services | Sanskriti Solar" />
+                <meta property="og:description" content="Explore our commercial solar system services at Sanskriti Solar. We offer comprehensive solar solutions for industries, helping to reduce grid power usage and save costs." />
+                <meta property="og:image" content={commercialBg} />
+            </Helmet>
             <Banner backgroundImage={commercialBg} title={'Commercial Solar project'} />
             <Box p={5} animation={`${fadeIn} 2s ease-in-out`}>
                 <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="center" gap={6}>

@@ -6,11 +6,42 @@ import Banner from '../../components/Banner';
 import BannerImage from '../../assets/banner.jpg';
 import SideBar from './SideBar';
 import SocialMedia from '../../components/SocialMedia';
+import { Helmet } from 'react-helmet';
 const OnGridSolar = () => {
     const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
 
     return (
         <>
+            <Helmet>
+                <title>On Grid Solar System | Sanskriti Solar</title>
+                <meta name="description" content="Learn about On Grid Solar Systems offered by Sanskriti Solar. Discover how on-grid solar systems work, their components, and the benefits of installing them. Get detailed insights on solar panel systems, inverters, and more." />
+                <meta name="keywords" content="On Grid Solar System, Solar Panels, Solar Inverter, Solar Power, Roof Solar Power Plant, Solar Energy, Sanskriti Solar" />
+                <meta property="og:title" content="On Grid Solar System | Sanskriti Solar" />
+                <meta property="og:description" content="Learn about On Grid Solar Systems offered by Sanskriti Solar. Discover how on-grid solar systems work, their components, and the benefits of installing them. Get detailed insights on solar panel systems, inverters, and more." />
+                <meta property="og:image" content={BannerImage} />
+                <meta property="og:url" content="https://sanskritisolar.in/on-grid-solar" />
+                <script type="application/ld+json">
+                    {`
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "On Grid Solar System",
+            "description": "On-Grid solar system generates power with solar panels and diverts excess power back to the grid. Learn about its components and benefits.",
+            "brand": {
+                "@type": "Organization",
+                "name": "Sanskriti Solar"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://sanskritisolar.in/on-grid-solar",
+                "priceCurrency": "INR",
+                "price": "Contact for pricing",
+                "itemCondition": "https://schema.org/NewCondition"
+            }
+        }
+        `}
+                </script>
+            </Helmet>
             <Banner backgroundImage={BannerImage} title={'On Grid Solar System'} />
 
             <Flex direction={{ base: 'column', md: 'row' }} margin="50px" wrap="wrap">

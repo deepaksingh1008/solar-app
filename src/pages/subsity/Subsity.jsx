@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../assets/subsidy.png';
+import img from '../../assets/subsidy.jpeg';
 import {
     Box,
     VStack,
@@ -9,39 +9,35 @@ import {
 import { useNavigate } from 'react-router-dom';
 
 const ResponsiveCard = () => {
-    const navigate = useNavigate()
-    const cardWidth = useBreakpointValue({ base: '100%', md: '80%' });
-    const cardPaddingBottom = useBreakpointValue({ base: '200px', md: '400px', lg: '600px' });
-    const titleFontSize = useBreakpointValue({ base: '3xl', md: '4xl', lg: '5xl' });
+    const navigate = useNavigate();
+    const cardWidth = useBreakpointValue({ base: '100%', md: '80%', lg: '60%' });
+    const cardHeight = useBreakpointValue({ base: '200px', md: '400px', lg: '600px' });
+    const titleFontSize = useBreakpointValue({ base: '2xl', md: '3xl', lg: '4xl' });
 
     return (
-        <Box>
+        <Box textAlign="center" py={10}>
             <VStack spacing={4} alignItems="center">
                 <Text fontSize={titleFontSize} fontWeight="bold">
                     SUBSIDY
                 </Text>
             </VStack>
             <Box
-                maxW={cardWidth}
+                width={cardWidth}
+                height={cardHeight}
                 bgImage={`url(${img})`}
-                bgSize="cover"
-                bgPos="center"
+                bgSize="contain"
+                bgPosition="center"
                 bgRepeat="no-repeat"
                 borderRadius="lg"
                 boxShadow="lg"
-                p={6}
                 mx="auto"
                 mt={8}
-                cursor='pointer'
-                // Set padding bottom responsively
-                pb={cardPaddingBottom}
+                cursor="pointer"
                 onClick={() => navigate(`/subsidy`)}
+                transition="transform 0.2s"
+                _hover={{ transform: 'scale(1.05)' }}
             >
-                <VStack spacing={4} alignItems="center">
-                    <Text fontSize={titleFontSize} fontWeight="bold" color='orange'>
-                        प्रधानमंत्री सूर्योदय योजना
-                    </Text>
-                </VStack>
+                {/* Optional content inside the card */}
             </Box>
         </Box>
     );

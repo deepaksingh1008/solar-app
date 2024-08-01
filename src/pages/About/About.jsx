@@ -8,11 +8,50 @@ import AboutImage from '../../assets/about.jpg'
 import img2 from '../../assets/save-money.png'
 import img3 from '../../assets/roof.png'
 import img4 from '../../assets/plug.jpg'
+import { Helmet } from 'react-helmet';
 const About = () => {
     const MotionBox = motion(Box);
 
     return (
         <>
+            <Helmet>
+                <title>About Us - Sanskriti Solar</title>
+                <meta name="description" content="Learn more about Sanskriti Solar, a leading provider of solar energy solutions in Varanasi. Discover our expertise in solar panel installation, cost-saving benefits, and commitment to clean energy." />
+                <meta name="keywords" content="solar energy solutions, solar panel installation, solar energy provider, Sanskriti Solar, Varanasi solar company, renewable energy, solar power benefits, clean energy" />
+                <meta property="og:title" content="About Us - Sanskriti Solar" />
+                <meta property="og:description" content="Learn more about Sanskriti Solar, a leading provider of solar energy solutions in Varanasi. Discover our expertise in solar panel installation, cost-saving benefits, and commitment to clean energy." />
+                <meta property="og:image" content={AboutImage} />
+                <meta property="og:url" content="https://sanskritisolar.in/about" />
+                <meta property="og:type" content="website" />
+                <script type="application/ld+json">
+                    {`
+                        {
+                          "@context": "http://schema.org",
+                          "@type": "Organization",
+                          "name": "Sanskriti Solar",
+                          "url": "https://sanskritisolar.in",
+                          "logo": "http://www.yourcompany.com/logo.png",
+                          "sameAs": [
+                            "https://www.facebook.com/profile.php?id=61559821108879",
+                            "https://www.instagram.com/sanskritisolar?igsh=aXdscmVqenplNTdm"
+                          ],
+                          "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Varanasi",
+                            "addressRegion": "Uttar Pradesh",
+                            "postalCode": "221106",
+                            "addressCountry": "IN"
+                          },
+                          "contactPoint": {
+                            "@type": "ContactPoint",
+                            "contactType": "Customer Service",
+                            "telephone": "+917309375095",
+                            "email": "info@yourcompany.com"
+                          }
+                        }
+                    `}
+                </script>
+            </Helmet>
             <Banner backgroundImage={img1} title={'ABOUT'} />
             <Box p={{ base: 4, md: 8 }}>
                 <Flex

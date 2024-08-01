@@ -14,6 +14,7 @@ import img4 from '../../assets/s4.jpg';
 import WhyChoose from "../../components/WhyChoose";
 import OurServices from '../../components/OurServices'
 import Subsidy from '../../pages/subsity/Subsity'
+import { Helmet } from 'react-helmet'
 const Home = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const images = [
@@ -35,6 +36,13 @@ const Home = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Home - Sanskriti Solar</title>
+                <meta name="description" content="Welcome to the home page of Your Company. We offer the best solar energy solutions including on-grid, off-grid, and hybrid solar systems. Contact us today for solar panel installation and renewable energy services." />
+                <meta name="keywords" content="solar energy solutions, solar power systems, solar energy provider, solar panel installation, solar power services, solar energy company, renewable energy solutions, solar energy for homes, solar energy for businesses, on-grid solar systems, off-grid solar systems, hybrid solar systems, solar energy benefits, solar power advantages, sustainable energy solutions, clean energy solutions, green energy provider, solar energy experts" />
+
+                <meta name="author" content="Saurabh Singh" />
+            </Helmet>
             <Box
                 height="100vh"
                 backgroundImage={`url(${images[currentImageIndex]})`}

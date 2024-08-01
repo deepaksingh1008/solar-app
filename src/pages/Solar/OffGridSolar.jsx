@@ -5,11 +5,42 @@ import SideBar from './SideBar';
 import OffGridImage from '../../assets/off-grid.jpg'
 import Banner from '../../components/Banner';
 import SocialMedia from '../../components/SocialMedia';
+import { Helmet } from 'react-helmet';
 const OffGridSolar = () => {
     const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
 
     return (
         <>
+            <Helmet>
+                <title>Off Grid Solar System | Sanskriti Solar</title>
+                <meta name="description" content="Explore our Off Grid Solar Systems at Sanskriti Solar. Learn about how off-grid systems operate independently of the power grid, including benefits, components, and use cases." />
+                <meta name="keywords" content="Off Grid Solar System, Solar Panels, Solar Power, Solar Battery Storage, Independent Solar Systems, Sanskriti Solar" />
+                <meta property="og:title" content="Off Grid Solar System | Sanskriti Solar" />
+                <meta property="og:description" content="Explore our Off Grid Solar Systems at Sanskriti Solar. Learn about how off-grid systems operate independently of the power grid, including benefits, components, and use cases." />
+                <meta property="og:image" content={BannerImage} />
+                <meta property="og:url" content="https://sanskritisolar.in/off-grid-solar" />
+                <script type="application/ld+json">
+                    {`
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Off Grid Solar System",
+            "description": "Off Grid Solar Systems operate independently from the power grid, utilizing solar panels and batteries for energy storage and use.",
+            "brand": {
+                "@type": "Organization",
+                "name": "Sanskriti Solar"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://sanskritisolar.in/off-grid-solar",
+                "priceCurrency": "INR",
+                "price": "Contact for pricing",
+                "itemCondition": "https://schema.org/NewCondition"
+            }
+        }
+        `}
+                </script>
+            </Helmet>
             <Banner backgroundImage={BannerImage} title={'Off Grid Solar System'} />
 
             <Flex direction={{ base: 'column', md: 'row' }} margin="50px" wrap="wrap">

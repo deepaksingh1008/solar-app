@@ -4,7 +4,7 @@ import { FaSolarPanel } from 'react-icons/fa';
 import HomeImage from '../../assets/Home.jpg'
 import Banner from '../../components/Banner';
 import HomeBg from '../../assets/homebg.jpg'
-
+import { Helmet } from 'react-helmet';
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -17,6 +17,14 @@ const fadeIn = keyframes`
 const HomeServices = () => {
     return (
         <>
+            <Helmet>
+                <title>Rooftop Solar Project Services | Sanskriti Solar</title>
+                <meta name="description" content="Discover our rooftop solar project services at Sanskriti Solar. We offer expert installation of solar panels for homes to help you save on energy costs and reduce your carbon footprint." />
+                <meta name="keywords" content="rooftop solar project, solar panels for home, solar installation, Sanskriti Solar" />
+                <meta property="og:title" content="Rooftop Solar Project Services | Sanskriti Solar" />
+                <meta property="og:description" content="Discover our rooftop solar project services at Sanskriti Solar. We offer expert installation of solar panels for homes to help you save on energy costs and reduce your carbon footprint." />
+                <meta property="og:image" content={HomeBg} />
+            </Helmet>
             <Banner backgroundImage={HomeBg} title={'Rooftop solar project'} />
             <Box p={5} animation={`${fadeIn} 2s ease-in-out`}>
                 <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="center" gap={6}>
